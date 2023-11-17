@@ -1,0 +1,190 @@
+.community {
+    &_promo {
+        color: $btn-color;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &_title {
+        @include title_block;
+    }
+    &_content {
+        display: flex;
+        padding-left: 70px;
+        align-items: center;
+        margin-top: 45px;
+        justify-content: space-between;
+    }
+    &_phone {
+        width: 247px;
+        height: 507px;
+        background-image: url(../../img/community/phone_for_video.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    &_video-file {
+        position: absolute;
+        width: 239px;
+        height: 499px;
+        top: 4px;
+        left: 4px;
+        object-fit: cover;
+        border-radius: 35px;
+    }
+    &_road {
+        display: grid;
+        position: relative;
+        grid-template-columns: repeat(3, 240px);
+        grid-template-rows: repeat(2, 240px);
+        gap: 18px;
+    }
+    &_card {
+        border-radius: 25px;
+        padding: 30px;
+        border: 1px solid #272548;
+        background: linear-gradient(117deg, #15123E 3.06%, #141241 101.98%);
+        &_number {
+            color: $white-color;
+            // font-family: Gotham Pro;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+        }
+        &:hover {
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.20);
+            background: linear-gradient(136deg, $btn-color 0.98%, #C76F0C 103.13%);
+            .community_card_telegramm {
+                background: linear-gradient(136deg, $btn-color 0.98%, #C76F0C 103.13%);
+            }
+        }
+        &_wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            justify-content: space-around;
+            padding-top: 10px;
+            padding-bottom: 10px
+        }
+        &_telegramm {
+            @include community_card;
+            img {
+                margin-left: -5px;
+            }
+        }
+        &_descr {
+            @include community_card_descr;
+        }
+        &_descr_2 {
+            width: 113px;
+        }
+        &_descr_3 {
+            width: 205px;
+            margin-bottom: -22px;
+        }
+    }
+    &_card-3 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    &_btns-wrap {
+        position: absolute;
+        display: flex;
+        bottom: 0;
+    }
+    &_btns {
+        height: 55px;
+        width: 55px;
+        margin-right: 13px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border: 1px solid $btn-color;
+        background: linear-gradient(117deg, #15123E 3.06%, #141241 101.98%);
+        &:hover {
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.20);
+            background: linear-gradient(136deg, $btn-color 0.98%, #C76F0C 103.13%);
+            svg path {
+                fill: $white-color;
+            }
+        }
+    }
+    &_btns-phone-left {
+        height: 55px;
+        width: 55px;
+        margin-right: 13px;
+        border-radius: 100%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border: 1px solid $btn-color;
+        background: linear-gradient(117deg, #15123E 3.06%, #141241 101.98%);
+        &:hover {
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.20);
+            background: linear-gradient(136deg, $btn-color 0.98%, #C76F0C 103.13%);
+            svg path {
+                fill: $white-color;
+            }
+        }
+    }
+    &_btns-phone-right {
+        height: 55px;
+        width: 55px;
+        margin-right: 13px;
+        border-radius: 100%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border: 1px solid $btn-color;
+        background: linear-gradient(117deg, #15123E 3.06%, #141241 101.98%);
+        &:hover {
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.20);
+            background: linear-gradient(136deg, $btn-color 0.98%, #C76F0C 103.13%);
+            svg path {
+                fill: $white-color;
+            }
+        }
+    }
+    &_completation {
+        margin-top: 100px;
+        width: 100%;
+        padding: 50px 0;
+        border-radius: 25px;
+        background: url(../../img/community/completation_back.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: -150px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        &_text {
+            color: $white-color;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 600;
+            span {
+                color: $green-color;
+            }
+        }
+        &_bnt-vote {
+            @include community_completation_bnt;
+            box-shadow: (0px 10px 35px rgba(49, 191, 115, 0.20));
+            background-color: $green-color;
+        }
+        &_bnt-getBuss {
+            @include community_completation_bnt;
+            box-shadow: (0px 10px 35px rgba(233, 151, 58, 0.30));
+            background-color: $btn-color;
+        }
+    }
+}

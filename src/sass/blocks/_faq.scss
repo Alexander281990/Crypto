@@ -1,0 +1,151 @@
+.faq {
+    margin-top: 88px;
+    &_title {
+        @include title_block;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &_list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        padding-left: 116px;
+        padding-right: 116px;
+    }
+    &_list-item {
+        display: flex;
+        z-index: 5;
+        align-items: center;
+        padding-left: 19px;
+        padding-right: 5px;
+        height: 68px;
+        width: 100%;
+        margin-top: 30px;
+        border-radius: 35px;
+        border: 1px solid #272548;
+        background: linear-gradient(117deg, #15123E 3.06%, #141241 101.98%);
+        &_numb {
+            color: #7271A1;
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            margin-right: 13px;
+        }
+        &_text {
+            color: $white-color;
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+        }
+        &_btn {
+            width: 58px;
+            height: 58px;
+            border-radius: 100%;
+            background-image: url('../../img/faq/gg.png');
+            background-repeat: no-repeat;
+            background-size: 220%;
+            background-position-x: 48%;
+            background-position-y: 38%;
+            cursor: pointer;
+            margin-left: auto;
+            box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, .7);
+            &_plus {
+                background: $white-color;
+                height: 20px; 
+                width: 2px;
+                position: relative; 
+                left: 30px;
+                top: 18px;
+            }
+            &_plus:after {
+                content: "";
+                height: 2px; 
+                width: 20px;
+                background: $white-color;
+                position: absolute; 
+                left: -9px; 
+                top: 9px;
+            }
+        }
+    }
+    &_list-inner {
+        width: 100%;
+        height: 0px;
+        border-radius: 35px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        display: flex;
+        align-items: end;
+        margin-top: -33px;
+        padding-left: 19px;
+        padding-bottom: 35px;
+        color: #BCBCBC;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        background-color: #0F0D2F;
+        border: 1px solid #272548;
+        -webkit-transition: 0.5s ease-in-out;
+        -moz-transition: 0.5s ease-in-out;
+        -o-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+        -webkit-transform: scaleY(0);
+        -ms-transform: scaleY(0);
+        transform: scaleY(0);
+        -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        transform-origin: 0 0;
+        z-index: 1;
+    }
+    &_list-toggle {
+        height: 120px;
+        -webkit-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        transform-origin: 0 0;
+    }
+    &_banner {
+        width: 100%;
+        height: 145px;
+        border-radius: 25px;
+        background-image: url('../../img/faq/baner_bitcoin.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 58px;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        position: relative;
+        &_text {
+            color: #FFF;
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 42px;
+            span {
+                color: $green-color;
+            }
+        }
+        &_bitc-big {
+            position: absolute;
+            left: 600px;
+            top: 15px;
+        }
+        &_bitc-middle {
+            position: absolute;
+            left: 760px;
+            bottom: 15px;
+        }
+        &_bitc-small {
+            position: absolute;
+            left: 900px;
+            bottom: 35px;
+        }
+    }
+}
